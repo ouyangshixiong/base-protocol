@@ -9,8 +9,18 @@ public class ProtocolWrapper<T> implements Serializable {
 
     //命令字，代替原来框架中的魔法数字
     private String CMD = "";
+    //消息跟踪号
+    private Long sequenceNumber;
 
     private T t;
+
+    public Long getSequenceNumber() {
+        return sequenceNumber;
+    }
+
+    public void setSequenceNumber(Long sequenceNumber) {
+        this.sequenceNumber = sequenceNumber;
+    }
 
     public String getCMD() {
         return CMD;
